@@ -1,0 +1,139 @@
+import java.util.Scanner;
+class Employee
+{
+	int id;
+	String name;
+	double salary;
+	Scanner sc=new Scanner(System.in);
+	Address add=new Address();
+	
+	 void read()
+	{
+		System.out.println("   Enter Employee Details   " );
+		System.out.println("Enter Employee Id :");
+		id=sc.nextInt();
+		System.out.println("Enter Employee Name");
+		name=sc.next();
+		System.out.println("Enter Employee Salary");
+		salary=sc.nextDouble();
+	}
+	void calSalary()
+	{
+		double hra,da,pf;
+		hra=(salary*10)/100;
+		da=(salary*7)/100;
+		pf=(salary*5/100);
+		salary=salary+hra+da-pf;
+		
+	}
+	void display()
+	{	
+		
+		System.out.println("\n\nEmployee Details are :");
+		System.out.println("\tId  of Employee :"+id);
+		System.out.println("\tName of Employee :"+name );
+		System.out.println("\tSalary of Employee :"+salary);
+	
+	}
+}
+
+
+class Manager extends Employee
+{	
+	int numberOfEmp;
+	Scanner sc=new Scanner(System.in);
+	
+	void readMgr()
+	{
+		System.out.println("Enter number of employees :");
+		numberOfEmp=sc.nextInt();
+		add.readAdd();
+
+	}
+	
+	void disMgr()
+	{	
+		System.out.println("\tNumber of Employees are :"+numberOfEmp);
+		add.disAdd();
+
+		
+	}
+	
+}
+
+
+class Programmer extends Employee
+{	
+	String projectName;
+
+	void readPrg()
+	{	
+		System.out.println("Enter Project Name :");
+		projectName=sc.next();
+		add.readAdd();
+		
+	}
+	
+	void disPrg()
+	{
+		System.out.println("\tEmployees project name :"+projectName);
+		add.disAdd();
+	}
+}
+
+class Address
+{
+	String city,state;
+	int pinCode;
+
+	Scanner sc=new Scanner(System.in);
+	
+	void readAdd()
+	{
+		System.out.println(" Enter Address Details  :");
+		System.out.println("Enter city:");
+		city=sc.next();
+		System.out.println("Enter State :");
+		state=sc.next();
+		System.out.println("Enter pinCode :");
+		pinCode=sc.nextInt();
+		
+	}
+
+	void disAdd()
+	{
+		System.out.println("\tAddress Details are:");
+		System.out.println("\t\tCity :"+city);
+		System.out.println("\t\tState :"+state);
+		System.out.println("\t\tPinCode :"+pinCode);
+
+	}
+}
+
+
+
+class EmployeeTest
+{	
+	public static void main(String args[])
+	{
+		Manager mgr=new Manager();
+		System.out.println("\n\n    Manager Details");
+		mgr.read();
+		mgr.readMgr();
+		
+		Programmer prg=new Programmer();
+		System.out.println("\n\n   Programmer Details");
+		prg.read();
+		prg.readPrg();
+
+		mgr.calSalary();
+		mgr.display();
+		mgr.disMgr();
+		
+		prg.calSalary();
+		prg.display();
+		prg.disPrg();
+		
+		
+	}
+}
