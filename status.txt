@@ -1,3 +1,6 @@
-  Done :- 1)MySQL assignment 
-               2)java_Assignments
+
+  Done :- 1)MySQL assignments
+               2) done upto java_Assignments 5
+
+
 
