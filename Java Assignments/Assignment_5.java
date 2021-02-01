@@ -21,7 +21,7 @@ class Student
 		sname=scan.next();
 		System.out.println("Enter Student age: ");
 		age=scan.nextInt();
-		System.out.println("Enter Marks For PCMB: ");
+		System.out.println("Enter Marks For four subjects: ");
 		for(int i=0;i<marks.length;i++)
 		{
 			marks[i]=scan.nextInt();
@@ -71,10 +71,10 @@ class Student
 	{
 			
 		System.out.println("*****Student Details*****");
-		System.out.println("ID of Student ="+sid);
-		System.out.println("Name of Student ="+sname);
-		System.out.println("Age of Student ="+age);
-		System.out.println("Grade of Student ="+grade);
+		System.out.println("Student ID ="+sid);
+		System.out.println("Student Name ="+sname);
+		System.out.println("Student Age ="+age);
+		System.out.println("Student  Grade="+grade);
 	
 	}
 }
@@ -85,7 +85,7 @@ class Assignment_5
 
 	public static void main(String[] args) 
 	{
-		System.out.println("How many Records Want to add?");
+		System.out.println("Number of Records  you Want to add?");
 		Scanner scan= new Scanner(System.in);
 		int rec=scan.nextInt();
 		Student std[]=new Student[rec];

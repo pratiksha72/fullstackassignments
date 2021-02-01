@@ -7,7 +7,7 @@ public class Assignment_6
         String temp;
         Scanner scan = new Scanner(System.in);
         
-        System.out.print("Enter number of Names you would like to enter:");
+        System.out.print("Enter number of Names:");
         count = scan.nextInt();
         
         
@@ -15,7 +15,7 @@ public class Assignment_6
         Scanner scan2 = new Scanner(System.in);
         
         
-        System.out.println("Enter the Names one by one:");
+        System.out.println("Enter the Name:");
         for(int i = 0; i < count; i++)
         {
             str[i] = scan2.nextLine();

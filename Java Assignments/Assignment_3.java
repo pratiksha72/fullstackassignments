@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Emp
+class Employee
 {	
 
 	    int n;
@@ -24,7 +24,7 @@ class Emp
 		void read()
 		{ 
 			Scanner scan= new Scanner(System.in);
-			System.out.println("*****Enter Employee Details*****");
+			System.out.println("Enter Details about Employee");
 			for(int i=0; i<n;i++)
 			{	
 				
@@ -82,7 +82,7 @@ class Emp
 		{
 			for(int i=0; i<n;i++)
 			{
-				System.out.println("****Employees Details are as follows****");
+				System.out.println("Employees Details:");
         			System.out.println("");
         			System.out.println("Employee id is :"+id[i]);
         			System.out.println("Employee Name: "+name[i]);
@@ -99,10 +99,10 @@ class Assignment_3
 		System.out.println("How many Records Want to add?");
 		Scanner scan= new Scanner(System.in);
 		int rec=scan.nextInt();
-		Emp e=new Emp(rec);
-		e.read();
-		e.calSalary();
-		e.display();
+		Employee emp=new Emp(rec);
+		emp.read();
+		emp.calSalary();
+		emp.display();
 	}
 	
 }

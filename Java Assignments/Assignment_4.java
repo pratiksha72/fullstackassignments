@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Emp
+class Employee
 {
 
 	Scanner scan=new Scanner(System.in);
@@ -31,7 +31,7 @@ class Emp
 
 	void display()
 	{
-		System.out.println("****Details are as follows****");
+		System.out.println("Details :");
         	System.out.println("");
         	System.out.println("Id: "+id);
         	System.out.println("Name: "+name);
@@ -44,7 +44,7 @@ class Emp
 
 }
 
-class Manager extends Emp
+class Manager extends Employee
 {
 
 	Scanner scan=new Scanner(System.in);
@@ -60,27 +60,27 @@ class Manager extends Emp
 
 	void disMgr()
 	{
-		System.out.println("Number of Employees are as follows:"+numOfEmp);
+		System.out.println("Number of Employees ::"+numOfEmp);
 		add.disAdd();
 	}
 
 
 }
 
-class Programmer extends Emp{
+class Programmer extends Employee{
 	Scanner scan=new Scanner(System.in);
-	String project_name;
+	String projectName;
 
 	void readPrg()
 	{
-		System.out.println("Enter Project Name:");
+		System.out.println("Enter Name of Project:");
 		project_name=scan.next();
 		add.readAdd();
 	}
 
 	void disPrg()
 	{
-		System.out.println("Project Name is as follows:"+project_name);
+		System.out.println("Project Name is :"+projectName);
 		add.disAdd();
 	}
 
@@ -124,23 +124,23 @@ class Assignment_4
 	public static void main(String[] args) 
 	{
 
-		System.out.println("Manager Details:");
-		Manager m=new Manager();
-		m.read();
-		m.readMgr();
+		System.out.println(" Details Manager:");
+		Manager mgr=new Manager();
+		mgr.read();
+		mgr.readMgr();
 		
 		System.out.println("");
-		System.out.println("Programmer Details:");
-		Programmer p=new Programmer();
-		p.read();
-		p.readPrg();
+		System.out.println("Details of :Programmer");
+		Programmer prg=new Programmer();
+		prg.read();
+		prg.readPrg();
 		
-		m.calSalary();
-		m.display();
-		m.disMgr();
-		p.calSalary();
-		p.display();
-		p.disPrg();
+		mgr.calSalary();
+		mgr.display();
+		mgr.disMgr();
+		prg.calSalary();
+		prg.display();
+		prg.disPrg();
 		
 	}
 }
